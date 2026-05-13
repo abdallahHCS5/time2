@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1e3d59;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #16324f;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .facts {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #1e3d59;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #16324f;
+    }
+    footer {
+      background: #1e3d59;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
 <body>
+  <header>
+    <h1>⚽ Football World</h1>
+    <p>Your hub for soccer facts and updates</p>
+  </header>
 
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Clubs</a>
+    <a href="#">Players</a>
+    <a href="#">History</a>
+  </nav>
 
-<iframe src="https://free.timeanddate.com/clock/iabgs67i/n53/fs48/fc9ff/tc000/ftb/bas4/bat1/bacfff/pa8/tt0/tw1/th2/ta1/tb4" frameborder="0" width="599" height="134"></iframe>
-<iframe src="https://free.timeanddate.com/clock/iabgs67i/n861/fs48/fc9ff/tc000/ftb/bas4/bat1/bacfff/pa8/tt0/tw1/th2/ta1/tb4" frameborder="0" width="599" height="134"></iframe>
+  <div class="container">
+    <div class="facts">
+      <h2>Interesting Soccer Facts</h2>
+      <ul>
+        <li>Soccer is the most popular sport in the world, with over 4 billion fans.</li>
+        <li>The FIFA World Cup is the most-watched sporting event globally.</li>
+        <li>Brazil has won the most World Cups (5 titles).</li>
+        <li>The fastest goal in World Cup history was scored in 11 seconds by Hakan Şükür (Turkey, 2002).</li>
+      </ul>
+      <p id="randomFact"></p>
+      <button onclick="showFact()">Show Random Fact</button>
+    </div>
+  </div>
 
+  <footer>
+    <p>&copy; 2026 Football World | Designed by Abdallah</p>
+  </footer>
+
+  <script>
+    const facts = [
+      "Lionel Messi and Cristiano Ronaldo are considered two of the greatest players ever.",
+      "The first official soccer match was played in 1863 in England.",
+      "The largest soccer stadium is Rungrado 1st of May Stadium in North Korea, with a capacity of 114,000.",
+      "The Champions League is the most prestigious club competition in Europe.",
+      "Egyptian player Mohamed Salah is nicknamed 'The Egyptian King'."
+    ];
+
+    function showFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById("randomFact").innerText = facts[randomIndex];
+    }
+  </script>
 </body>
 </html>
+
 
